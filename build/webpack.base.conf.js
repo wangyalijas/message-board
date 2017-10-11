@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const NyanProgressPlugin = require('nyan-progress-webpack-plugin')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -62,6 +63,18 @@ module.exports = {
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       }
-    ]
-  }
+    ],
+  },
+  plugins: [
+    new NyanProgressPlugin({
+      // 获取进度的时间间隔，默认 180 ms
+      debounceInterval: 60,
+      nyanCatSays (progress, messages) {
+        if (progress === 1) {
+          // 当构建完成时，喊出「呦，又在写 Bug 了？」
+          return '呦, 又在写 Bug 了?'
+        }
+      }
+    })
+  ]
 }
