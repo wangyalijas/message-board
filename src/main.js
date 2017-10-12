@@ -3,13 +3,14 @@
 import Vue from 'vue'
 import router from './router'
 
-import Router from '@/routes/'
 import App from './App'
 import '@/assets/css/common.css'
 import '@/assets/css/reset.css'
 
-var VueMaterial = require('vue-material')
-Vue.use(VueMaterial)
+import MuseUI from 'muse-ui'
+import 'muse-ui/dist/muse-ui.css'
+import '@/assets/css/mouse-ui-fonts.css'
+Vue.use(MuseUI)
 
 Vue.config.productionTip = false
 

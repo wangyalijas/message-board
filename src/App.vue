@@ -1,8 +1,9 @@
 <template>
-
+  <nav-bar></nav-bar>
 </template>
 
 <script>
+  import NavBar from '@/components/NavBar'
     export default {
         data() {
             return {};
@@ -15,7 +16,10 @@
         },
         mounted() {
             console.log('Component mounted');
-        }
+        },
+      components:{
+        NavBar
+      }
     }
 </script>
 
