@@ -8,7 +8,6 @@
 
       <template slot="right">
         <mu-raised-button class="demo-raised-button" label="登录" icon="folder" secondary/>
-        <mu-icon-button icon="expand_more"/>
       </template>
     </mu-appbar>
 </template>
@@ -36,5 +35,8 @@
   >>> .left {
     color: #42b983;
     height: 80%;
+  }
+  .mu-appbar .mu-icon-button{
+    color: white;
   }
 </style>
