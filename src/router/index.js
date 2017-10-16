@@ -3,9 +3,11 @@ import Router from 'vue-router'
 import App from '@/App'
 import Login from '@/views/auth/Login'
 
+// import routesMap from './map/'  //路由映射
+
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -14,3 +16,7 @@ export default new Router({
     }
   ]
 })
+
+// router.map(routesMap)
+
+export default router
