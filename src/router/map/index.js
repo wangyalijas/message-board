@@ -8,6 +8,6 @@ export default [
     path: '/',
     component: Index
   },
-  authRoutes
+  ...authRoutes
 ]
 
