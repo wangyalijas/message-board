@@ -46,6 +46,7 @@
   }
 
   .header{
+    height: 55px;
     background-color: #7e57c2;
   }
 

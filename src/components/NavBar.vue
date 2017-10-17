@@ -1,15 +1,21 @@
 <template>
-    <mu-appbar >
-      <template slot="left">
-        <mu-icon-button icon="home"/>
-        <mu-icon-button icon="message"/>
-      </template>
+  <el-row :gutter="10">
+    <el-col :xs="24" :sm="6" :md="4" :lg="3">
+      <div class="grid-content grid-nav-list active">首页</div>
+    </el-col>
 
+    <el-col :xs="24" :sm="6" :md="4" :lg="3">
+      <div class="grid-content grid-nav-list">消息</div>
+    </el-col>
 
-      <template slot="right">
-        <mu-raised-button class="demo-raised-button" label="登录" icon="folder" secondary/>
-      </template>
-    </mu-appbar>
+    <el-col :xs="24" :sm="6" :md="8" :lg="15">
+      <div class="grid-content"></div>
+    </el-col>
+
+    <el-col :xs="24" :sm="6" :md="4" :lg="3">
+      <div class="grid-content grid-nav-list">登陆</div>
+    </el-col>
+  </el-row>
 </template>
 
 <script>
@@ -32,11 +38,22 @@
 </script>
 
 <style scoped>
-  >>> .left {
-    color: #42b983;
-    height: 80%;
+  .bg-purple {
+    background: #d3dce6;
   }
-  .mu-appbar .mu-icon-button{
-    color: white;
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .grid-content {
+    min-height: 55px;
+  }
+  .grid-nav-list{
+    font-size: 24px;
+    text-align: center;
+    line-height: 55px;
+  }
+  .active{
+    color: mediumpurple;
+    background-color: pink;
   }
 </style>

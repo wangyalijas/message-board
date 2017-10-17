@@ -16,12 +16,13 @@ Vue.use(MuseUI)
 
 
 //element-ui
-import { Button, Select ,Input} from 'element-ui'
-Vue.component(Button.name, Button)
-Vue.component(Select.name, Select)
-Vue.component(Input.name, Select)
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
+Vue.use(ElementUI)
 
 Vue.config.productionTip = false
+
+
 
 /* eslint-disable no-new */
 new Vue({

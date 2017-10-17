@@ -1,22 +1,12 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import App from '@/App'
-import Login from '@/views/auth/Login'
+import VueRouter from 'vue-router'
 
-// import routesMap from './map/'  //路由映射
+import routesMap from './map/'  //路由映射
 
-Vue.use(Router)
-
-const router = new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Login',
-      component: Login
-    }
+Vue.use(VueRouter)
+const router = new VueRouter({
+  routes:[
+    ...routesMap
   ]
 })
-
-// router.map(routesMap)
-
 export default router

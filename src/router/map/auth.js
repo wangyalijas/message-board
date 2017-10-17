@@ -1,7 +1,6 @@
+const login = resolve => require(['@/views/auth/login.vue'], resolve)
 export default {
-  'auth/login': {
-    component(resolve) {
-      require(['@/views/auth/login'], resolve)
-    }
-  }
+  'name': 'auth/login',
+  'path': '/auth/login',
+  component: login
 }
