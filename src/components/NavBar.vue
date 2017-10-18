@@ -1,7 +1,13 @@
 <template>
   <el-row :gutter="10">
     <el-col :xs="24" :sm="6" :md="4" :lg="3">
-      <router-link to="/" class="grid-content grid-nav-list">首页</router-link>
+      <router-link
+        tag="div"
+        to="/"
+        class="grid-content grid-nav-list"
+        exact
+        >首页
+      </router-link>
     </el-col>
 
     <el-col :xs="24" :sm="6" :md="4" :lg="3">
@@ -13,49 +19,59 @@
     </el-col>
 
     <el-col :xs="24" :sm="6" :md="4" :lg="3">
-      <router-link to="/auth/login" class="grid-content grid-nav-list">登录</router-link>
+      <router-link
+        tag="div"
+        to="/auth/login"
+        class="grid-content grid-nav-list"
+        exact
+        >登录
+      </router-link>
     </el-col>
   </el-row>
 </template>
 
 <script>
-    export default {
-        data() {
-            return {};
-        },
-        computed: {},
-        watch: {},
-        methods: {},
-        created() {
-            console.log('Component created');
-        },
-        mounted() {
-            console.log('Component mounted');
-        },
-      components: {
-      }
-    }
+  export default {
+    data() {
+      return{}
+    },
+    computed: {},
+    watch: {},
+    methods: {
+
+    },
+    created() {
+      console.log('Component created');
+    },
+    mounted() {
+      console.log('Component mounted');
+    },
+    components: {}
+  }
 </script>
 
 <style scoped>
   .bg-purple {
     background: #d3dce6;
   }
+
   .bg-purple-light {
     background: #e5e9f2;
   }
+
   .grid-content {
-    width: 100%;
-    height: 100%;
     min-height: 55px;
+    color: white;
   }
-  .grid-nav-list{
+
+  .grid-nav-list {
     font-size: 24px;
     text-align: center;
     line-height: 55px;
   }
-  .active{
+
+  .router-link-active {
     color: mediumpurple;
-    background-color: pink;
+    background-color: rebeccapurple;
   }
 </style>
