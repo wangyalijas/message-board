@@ -1,6 +1,10 @@
 <template>
-  <div class="text-field">
-    <mu-text-field hintText="提示文字"/><br/>
+  <div>
+    <div class="text-field">
+      <mu-text-field hintText="输入昵称即可登陆"/>
+      <mu-icon value="done" color="#734DBA"/>
+    </div>
+    <mu-raised-button label="登陆" class="demo-raised-button position-middle" primary/>
   </div>
 </template>
 
@@ -31,5 +35,8 @@
   >>>.mu-text-field {
     margin-top: 180px;
     margin-left: 40%;
+  }
+  .position-middle{
+    margin-left: 45%;
   }
 </style>
