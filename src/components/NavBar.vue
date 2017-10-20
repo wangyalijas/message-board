@@ -41,10 +41,8 @@
 
     },
     created() {
-      console.log('Component created');
     },
     mounted() {
-      console.log('Component mounted');
     },
     components: {}
   }

@@ -15,10 +15,8 @@
         watch: {},
         methods: {},
         created() {
-            console.log('Component created');
         },
         mounted() {
-            console.log('Component mounted');
         }
     }
 </script>

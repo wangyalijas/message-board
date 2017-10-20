@@ -9,6 +9,7 @@
 </template>
 
 <script>
+  console.log(this.$root);
   export default {
     data() {
       return {
@@ -19,10 +20,8 @@
     watch: {},
     methods: {},
     created() {
-      console.log('Component created');
     },
     mounted() {
-      console.log('Component mounted');
     }
   }
 </script>
