@@ -1,4 +1,4 @@
-import xhr from './xhr'
+import Service from './xhr'
 
 /**
  *用户认证所用到的API
@@ -6,14 +6,11 @@ import xhr from './xhr'
 class AuthService {
   /*检测当前用户是否已经登录*/
   checkLogin() {
-    console.log(xhr);
+    console.log(Service);
   }
 
   login(userData) {
-    return Service.post({
-      url: '/auth/login',
-      data: userData
-    })
+    return Service.post('/auth/login', userData)
   }
 }
 
