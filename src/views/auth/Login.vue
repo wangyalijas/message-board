@@ -1,24 +1,34 @@
 <template>
   <div>
     <div class="text-field">
-      <mu-text-field hintText="输入昵称即可登陆"/>
-      <mu-icon value="done" color="#734DBA"/>
+      <mu-text-field hintText="输入昵称即可登陆" v-model="username"/>
+      <template v-if="username.length">
+        <mu-icon value="done" color="#734DBA"/>
+      </template>
     </div>
-    <mu-raised-button label="登陆" class="demo-raised-button position-middle" primary/>
+    <mu-raised-button label="登陆" class="demo-raised-button position-middle" primary @submit.prevent="handleSubmit"/>
   </div>
 </template>
 
 <script>
-  console.log(this.$root);
+  import handleSubmit from '@/services/authService'
+
   export default {
     data() {
       return {
-        value: '默认文字'
+        username: ''
       }
     },
     computed: {},
     watch: {},
-    methods: {},
+    methods: {
+      handleSubmit() {
+        console.log(1);
+        let username = this.username;
+        handleSubmit
+          .login({username})
+      }
+    },
     created() {
     },
     mounted() {
@@ -27,15 +37,17 @@
 </script>
 
 <style scoped>
-  .text-field{
+  .text-field {
     width: 100%;
     height: 100%;
   }
-  >>>.mu-text-field {
+
+  >>> .mu-text-field {
     margin-top: 180px;
     margin-left: 40%;
   }
-  .position-middle{
+
+  .position-middle {
     margin-left: 45%;
   }
 </style>
