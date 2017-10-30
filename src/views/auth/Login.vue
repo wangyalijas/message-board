@@ -23,10 +23,11 @@
     watch: {},
     methods: {
       handleSubmit() {
-        console.log(1);
         let username = this.username;
-        authService
-          .login({username})
+        authService.login({username})
+          .then(response => {
+          console.log(response);
+        });
       }
     },
     created() {
