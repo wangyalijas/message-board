@@ -6,13 +6,13 @@
         <mu-icon value="done" color="#734DBA"/>
       </template>
     </div>
-    <mu-raised-button label="登陆" class="demo-raised-button position-middle" primary @submit.prevent="handleSubmit"/>
+    <mu-raised-button label="登陆" class="demo-raised-button position-middle" primary @click="handleSubmit"/>
   </div>
 </template>
 
 <script>
-  import handleSubmit from '@/services/authService'
-
+  import authService from '@/services/authService'
+  console.log(authService);
   export default {
     data() {
       return {
@@ -25,7 +25,7 @@
       handleSubmit() {
         console.log(1);
         let username = this.username;
-        handleSubmit
+        authService
           .login({username})
       }
     },
