@@ -12,7 +12,6 @@
 
 <script>
   import authService from '@/services/authService'
-  console.log(authService);
   export default {
     data() {
       return {

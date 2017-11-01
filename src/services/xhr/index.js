@@ -1,7 +1,7 @@
 import axios from 'axios';
-import mock from '@/mock/index'
+import mock from '../../../mock/index'
 import settle from 'axios/lib/core/settle'
-import httpCodeService from '../httpCodeService'
+import httpCodeService from './httpCodeService'
 
 
 class Service {
