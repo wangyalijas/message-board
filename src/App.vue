@@ -9,7 +9,7 @@
       </div>
       <div class="content-right">
         <div class="breadcrumb">
-          <breadcrumd></breadcrumd>
+          <breadcrumd>萨达</breadcrumd>
         </div>
         <div class="body">
           <router-view></router-view>
